@@ -1,0 +1,6 @@
+1-Create a PHP application to just print a welcome page
+2-Build a docker image for apache, php, and your application
+3-Test this image on your machine
+4-Create a repo in docker hub
+5-Create a github repo with github actions to deliver the docker image for any push to the main branch
+

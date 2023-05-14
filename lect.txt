@@ -1,0 +1,52 @@
+Container: iticgi
+		Volume: Directory stored inside docker host hdd and mounted into /var/www/html inside the container
+		Want to start a container from iamge http and mount /var/www/html as a volume
+		
+		
+DevOPS
+Developer - Testers - SysAdmins
+CI/CD
+Continuse integration: SVN .. Github/Gitlab/CircleCI
+Continuse Delivery/Deployment: Jenkins/github actions/gitlab cd pipeline
+How to integrate your code/patch to the existing base code.
+Repo:
+	Main branch
+	Test branch
+	new feature branch
+	security vul branch
+	dev branch
+	
+1-Developer
+	WRite code -> push to dev branch
+	Needs, test -> pull to test branch
+	push to main -> 
+			Deliver application with the new update
+			Delopy the application to the production
+
+github actions: workflow
+	1-Event : On
+	2-Action: jobs
+
+On push to main branch, generate a docker image, and push it to docker hub
+1-Docker hub needs username/password
+		To use username/password/ we can store it as secrets in github repo	
+			From github repo, go settings, secrets and variables/ACtions/New
+			 repositry secret
+			 username: DOCKER_USERNAMNE
+			 password: DOCKER_PASSWORD
+			 "${{ secrets.DOCKER_USERNAMNE }}"
+			 "${{ secrets.DOCKER_PASSWORD }}"
+2-Workflow for php test
+3-Workflow for docker build/push
+
+jobs:
+  build:
+  deliver:
+  
+ All jobs are runing in parallel
+ Github : github runner
+	
+1-Create action:
+	ITI Application
+	php
+
